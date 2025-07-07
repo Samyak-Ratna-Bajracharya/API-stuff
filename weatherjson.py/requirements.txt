@@ -1,12 +1,8 @@
-#Requirements.txt
-"""
-Make a venv
+Make a VENV
 
-pip install requests mysql-connector-python fastapi uvicorn
+pip install uvicorn[standard] fastapi[standard] mysql_connector-python requests
 
-replace all placeholders in the code with your own values
-
-make a mysql database and a table with the following structure:
+Make an SQL database table in your database:
 
 CREATE TABLE weather_data (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -29,11 +25,3 @@ CREATE TABLE weather_data (
     longitude FLOAT,
     timezone VARCHAR(50),
     UNIQUE(id, city, datetime_local)  -- Ensure no duplicate entries for the same city and datetime
-);
-"""
-
-# requirements.txt
-requests
-mysql-connector-python
-fastapi[standard]
-uvicorn[standard]
